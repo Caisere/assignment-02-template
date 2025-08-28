@@ -38,17 +38,16 @@ export function evenNumbersWithin(destination) {
     // get the number from 0 to destination
     let sum = 0
     let count = 0
-    let arrayOfEvenNumbers = []
+    const arrayOfEvenNumbers = []
 
     // write your code here
-    const array = []
     for (let i = 0; i <= destination; i++) {
-        array.push(i)
+        if (i % 2 === 0) {
+            arrayOfEvenNumbers.push(i)
+            sum += i
+            count++
+        }
     }
-    arrayOfEvenNumbers = array.filter(num => num % 2 === 0)
-    sum = arrayOfEvenNumbers.reduce((acc, cur) => acc + cur, 0)
-    count = arrayOfEvenNumbers.length
-
     return {
         count,
         sum,
@@ -99,16 +98,16 @@ export function oddNumbersWithin(destination) {
     // get the number from 0 to destination
     let sum = 0
     let count = 0
-    let arrayOfOddNumbers = []
+    const arrayOfOddNumbers = []
 
     // write your code here
-    const arr = []
-    for (let i = 0; i < destination; i++) {
-        arr.push(i)
+    for (let i = 0; i <= destination; i++) {
+        if (i % 2 !== 0) {
+            arrayOfOddNumbers.push(i)
+            sum += i
+            count++
+        }
     }
-    arrayOfOddNumbers = arr?.filter(num => num % 2 !== 0)
-    sum = arrayOfOddNumbers.reduce((acc, cur) => acc + cur, 0)
-    count = arrayOfOddNumbers.length
     return {
         count,
         sum,
