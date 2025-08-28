@@ -11,6 +11,7 @@
     "repository": "https://github.com/oluwasetemi/assignment-02-template",
     "main": "index.js",
     "scripts": {
+        "dev": "vite",
         "test": "vitest",
         "lint": "eslint .",
         "prepare": "simple-git-hooks"
