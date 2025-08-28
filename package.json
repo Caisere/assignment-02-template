@@ -1,35 +1,43 @@
 {
-    "name": "assignment-02-template",
-    "type": "module",
-    "version": "1.0.0",
-    "author": {
-        "name": "Oluwasetemi Ojo",
-        "email": "setemiojo@gmail.com",
-        "url": "https://github.com/oluwasetemi"
-    },
-    "license": "MIT",
-    "repository": "https://github.com/oluwasetemi/assignment-02-template",
-    "main": "index.js",
-    "scripts": {
-        "dev": "vite",
-        "test": "vitest",
-        "lint": "eslint .",
-        "prepare": "simple-git-hooks"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "@antfu/eslint-config": "^5.2.1",
-        "eslint": "^9.34.0",
-        "nano-staged": "^0.8.0",
-        "simple-git-hooks": "^2.13.1",
-        "vitest": "^3.2.4"
-    },
-    "nano-staged": {
-        "*.{js}": [
-            "eslint --fix"
-        ]
-    },
-    "simple-git-hooks": {
-        "pre-commit": "nano-staged"
-    }
+  "name": "assignment-02-template",
+  "type": "module",
+  "version": "1.0.0",
+  "author": {
+    "name": "Oluwasetemi Ojo",
+    "email": "setemiojo@gmail.com",
+    "url": "https://github.com/oluwasetemi"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/oluwasetemi/assignment-02-template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest",
+    "lint": "eslint .",
+    "prepare": "simple-git-hooks",
+    "audit-ch-1": "vitest run --reporter=json --outputFile=audits/ch-1/ch-1.json src/__tests__/test-challenge-1.js",
+    "audit-ch-2": "vitest run --reporter=json --outputFile=audits/ch-2/ch-2.json src/__tests__/test-challenge-2.js",
+    "audit-ch-3": "vitest run --reporter=json --outputFile=audits/ch-3/ch-3.json src/__tests__/test-challenge-3.js",
+    "audit-ch-4": "vitest run --reporter=json --outputFile=audits/ch-4/ch-4.json src/__tests__/test-challenge-4.js",
+    "audit-ch-5": "vitest run --reporter=json --outputFile=audits/ch-5/ch-5.json src/__tests__/test-challenge-5.js",
+    "audit-ch-6": "vitest run --reporter=json --outputFile=audits/ch-6/ch-6.json src/__tests__/test-challenge-6.js",
+    "audit-ch-7": "vitest run --reporter=json --outputFile=audits/ch-7/ch-7.json src/__tests__/test-challenge-7.js",
+    "audit-ch-8": "vitest run --reporter=json --outputFile=audits/ch-8/ch-8.json src/__tests__/test-challenge-8.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.1",
+    "eslint": "^9.34.0",
+    "nano-staged": "^0.8.0",
+    "simple-git-hooks": "^2.13.1",
+    "vitest": "^3.2.4"
+  },
+  "nano-staged": {
+    "*.{js}": [
+      "eslint --fix"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "nano-staged"
+  }
 }

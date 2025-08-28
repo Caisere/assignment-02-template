@@ -76,7 +76,9 @@ export function celsiusToFahrenheit(arrayOfNumbers) {
     let result = []
 
     // write your code here
-    const convertToFahrenheit = arrayOfNumbers?.map(num => Math.trunc((num * 1.8) + 32))
+    const convertToFahrenheit = arrayOfNumbers?.map(num =>
+        Math.trunc(num * 1.8 + 32),
+    )
     result = convertToFahrenheit
     return result
 }
@@ -133,7 +135,7 @@ export function findMultiples(arrayOfNumbers, factor) {
     let arrayOfMultiples = []
 
     // write your code here
-    arrayOfMultiples = arrayOfNumbers?.filter(num => num % 3 === 0)
+    arrayOfMultiples = arrayOfNumbers?.filter(num => num % factor === 0)
     count = arrayOfMultiples?.length
     sum = arrayOfMultiples.reduce((acc, cur) => acc + cur, 0)
     return {
@@ -164,7 +166,7 @@ export function calculateFactorials(arrayOfNumbers) {
         if (n === 0 || n === 1) {
             return 1
         }
-        else if (n === -n) {
+        else if (n < 0) {
             return 0
         }
         for (let i = 2; i <= n; i++) {
@@ -195,9 +197,12 @@ export function findPrimeNumbers(arrayOfNumbers) {
 
     // write your code here
     function checkNumIsPrime(n) {
-        if (n < 2) return false
-        if (n === 2) return true
-        if (n % 2 === 0) return false // even number
+        if (n < 2)
+            return false
+        if (n === 2)
+            return true
+        if (n % 2 === 0)
+            return false // even number
 
         for (let i = 3; i <= Math.sqrt(n); i += 2) {
             if (n % i === 0) {
